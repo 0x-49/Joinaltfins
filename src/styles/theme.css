@@ -1,0 +1,30 @@
+:root {
+  /* Light mode colors */
+  --background: #FFFFFF;
+  --foreground: #333333;
+  --primary: #22C55E;
+  --primary-dark: #15803D;
+  --accent: #FF6F31;
+  --muted: #F5F5F5;
+  --muted-foreground: #22C55E;
+  --border: #e2e8f0;
+
+  /* Dark mode colors */
+  --dark-background: #1a1a1a;
+  --dark-foreground: #FFFFFF;
+  --dark-primary: #16A34A;
+  --dark-primary-dark: #166534;
+  --dark-accent: #FF8F5A;
+  --dark-muted: #2a2a2a;
+  --dark-border: #404040;
+}
+
+[data-theme="dark"] {
+  --background: var(--dark-background);
+  --foreground: var(--dark-foreground);
+  --primary: var(--dark-primary);
+  --primary-dark: var(--dark-primary-dark);
+  --accent: var(--dark-accent);
+  --muted: var(--dark-muted);
+  --border: var(--dark-border);
+}

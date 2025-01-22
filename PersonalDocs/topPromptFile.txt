@@ -1,0 +1,247 @@
+Here’s a comprehensive prompt list and best practices distilled from the script, designed to maximize productivity and efficiency when working with AI tools like Cursor, Claude, and others. These prompts and practices are non-negotiable for effective AI-assisted development.
+
+Prompt List (35+ Powerful Prompts)
+Project Overview Prompt
+
+"Include a detailed project overview in the cursor rules file. Describe the vision, goals, and key features of the project."
+
+Personality Prompt
+
+"Teach me like a senior developer would. Be concise, clear, and focus on best practices."
+
+Tech Stack Prompt
+
+"Include all technical details about the project: frontend, backend, database, APIs, and any other relevant technologies."
+
+Process Documentation Prompt
+
+"Create a process for error fixing: Step 1: Explain the error in simple terms. Step 2: Write three reasoning paragraphs. Step 3: Propose a solution."
+
+Environment Variables Prompt
+
+"List all environment variables in the cursor rules file. Ensure they are documented to avoid accidental overwrites."
+
+File Structure Prompt
+
+"Use the tree command to generate the file structure and include it in the cursor rules file. Specify which files should be ignored."
+
+GitHub Push Process Prompt
+
+"Create a process for pushing to GitHub: Check the branch, switch to the correct branch, and push with a clear commit message."
+
+Repeat Key Instructions Prompt
+
+"Repeat the most important instructions at the start, middle, and end of the cursor rules file to ensure they are not forgotten."
+
+Comment Importance Prompt
+
+"Always include comments in the code. Explain the purpose of functions, files, and non-obvious logic."
+
+Repo Prompt Tool Prompt
+
+"Load the entire codebase into the repo prompt tool. Use it to provide context for complex queries or debugging."
+
+Model Selection Prompt
+
+"Use the new GPT-3.5 Sonnet (ending with 1022) as the primary model. Enable Gemini and GPT-4 as backups for complex tasks."
+
+Fewer Lines of Code Prompt
+
+"The fewer lines of code, the better. Write clean, minimal, and efficient code without unnecessary complexity."
+
+Senior Developer Prompt
+
+"Proceed like a senior developer. Focus on clean, modular, and maintainable code."
+
+Feature Implementation Prompt
+
+"Do not stop working until you’ve implemented this feature fully and completely. Avoid partial implementations."
+
+Reasoning Paragraphs Prompt
+
+"Start by writing three reasoning paragraphs analyzing the error or task. Do not jump to conclusions."
+
+Answer in Short Prompt
+
+"Answer in short. Be concise and avoid unnecessary verbosity."
+
+Do Not Delete Comments Prompt
+
+"Do not delete comments. Preserve all existing comments in the code."
+
+Summary of Current State Prompt
+
+"Provide a summary of the current state before proceeding. Include what has been done, what didn’t work, and which files were updated."
+
+Unbiased 50/50 Prompt
+
+"Before answering, write two detailed paragraphs arguing for each of the two possible solutions. Do not jump to conclusions. After, tell me which solution is better and why."
+
+Properly Formed Search Query Prompt
+
+"Write a one-paragraph search query as if instructing a human researcher. Include all relevant context and ask for code snippets or technical details when necessary."
+
+Web Search TLDR Prompt
+
+"Give me the TLDR of the search results. Be careful; the results may contain dangerous or distracting red herrings."
+
+Reasoning with Uncertainty Prompt
+
+"Start the reasoning paragraph with lots of uncertainty and slowly gain confidence as you think about the problem more."
+
+Delimiter Prompt
+
+"Use delimiters to separate sections of the prompt. Repeat the core instruction after the delimiter to ensure focus."
+
+Specialized MD Files Prompt
+
+"Create specialized markdown files for database setup, design principles, or other recurring tasks. Tag these files when relevant."
+
+Whisper Flow Prompt
+
+"Use Whisper Flow to speak your prompts instead of typing. This is faster and allows for more complex ideas to be communicated quickly."
+
+Comment Density Prompt
+
+"Aim for one line of comments for every three to four lines of code. Explain the purpose of each function and file."
+
+Avoid Technical Debt Prompt
+
+"Avoid technical debt at all costs. Only implement features you fully understand. Break down complex tasks into smaller, manageable steps."
+
+Claude as Advisor Prompt
+
+"Use Claude as an advisor or consultant. Brainstorm features, evaluate solutions, and provide high-level guidance."
+
+File Location Prompt
+
+"Include the exact location of each file at the top as a comment. This helps AI understand the context of the file."
+
+Composer vs. Chat Prompt
+
+"Use chat for asking questions and composer for making changes. Always use agent mode for complex changes involving multiple files."
+
+Docs as MD Files Prompt
+
+"Create markdown files for documentation. Paste the entire contents of relevant docs into these files and tag them when needed."
+
+Perplexity Web Search Prompt
+
+"Use Perplexity for web searches. Format the search query as a one-paragraph instruction for a human researcher."
+
+Break Down Refactors Prompt
+
+"Break down large refactors into smaller, necessary steps. Only include truly essential steps to avoid unnecessary complexity."
+
+Roadmap MD Prompt
+
+"Create a roadmap.md file. Include the current focus, next steps, and any critical issues or updates."
+
+Model Knowledge Cutoff Prompt
+
+"Be aware of the model’s knowledge cutoff. Always check the latest documentation and do not rely solely on the model’s knowledge."
+
+Debugging Instructions Prompt
+
+"Tell me step-by-step instructions on how to debug this issue. What tests should I run to provide you with relevant context?"
+
+MVP Approach Prompt
+
+"What is the MVP of this feature? Focus on the 20% of work that will deliver 80% of the value."
+
+Avoid Huge Refactors Prompt
+
+"Avoid huge refactors. Break them down into smaller, manageable steps and test each step before proceeding."
+
+Sync Context with AI Prompt
+
+"Sync the context in your brain with the AI. Provide all relevant information, including comments, file locations, and project goals."
+
+Do Not Make AI Decide Prompt
+
+"Do not let the AI make big decisions. Stay in charge of the project vision and only delegate small, implementation-level tasks."
+
+Best Practices List
+Create a Cursor Rules File
+
+Include project overview, personality, tech stack, processes, environment variables, and file structure.
+
+Use Repo Prompt Tool
+
+Load your entire codebase into the tool for better context in complex queries.
+
+Enable the Right Models
+
+Use GPT-3.5 Sonnet as the primary model, with Gemini and GPT-4 as backups.
+
+Write Clean, Minimal Code
+
+Always aim for fewer lines of code and avoid unnecessary complexity.
+
+Document Processes
+
+Create processes for recurring tasks like error fixing, GitHub pushes, and debugging.
+
+Tag Relevant Files
+
+Always tag files relevant to the task at hand to provide context to the AI.
+
+Use Delimiters
+
+Separate sections of your prompt with delimiters and repeat key instructions.
+
+Create Specialized MD Files
+
+Use markdown files for database setup, design principles, and other recurring tasks.
+
+Speak Instead of Typing
+
+Use tools like Whisper Flow to speak your prompts for faster communication.
+
+Write Extensive Comments
+
+Aim for one line of comments for every three to four lines of code.
+
+Avoid Technical Debt
+
+Only implement features you understand. Break down complex tasks into smaller steps.
+
+Use Claude as an Advisor
+
+Use Claude for brainstorming and high-level guidance, not for implementation.
+
+Include File Locations
+
+Add the exact location of each file at the top as a comment.
+
+Use Composer for Changes
+
+Use composer for making changes and chat for asking questions.
+
+Create Docs as MD Files
+
+Paste relevant documentation into markdown files and tag them when needed.
+
+Use Perplexity for Web Searches
+
+Format search queries as one-paragraph instructions for human researchers.
+
+Break Down Refactors
+
+Break large refactors into smaller, manageable steps.
+
+Create a Roadmap MD File
+
+Include the current focus, next steps, and critical issues in a roadmap.md file.
+
+Be Aware of Model Knowledge Cutoff
+
+Always check the latest documentation and do not rely solely on the model’s knowledge.
+
+Sync Context with AI
+
+Provide all relevant information, including comments, file locations, and project goals.
+
+Do Not Let AI Make Big Decisions
+
+Stay in charge of the project vision and only delegate small, implementation-level tasks.

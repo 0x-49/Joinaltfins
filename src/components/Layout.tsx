@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ModeToggle } from "@/components/mode-toggle";
 
 declare global {
   namespace JSX {
@@ -11,7 +11,6 @@ declare global {
     }
   }
 }
-import { ModeToggle } from "@/components/mode-toggle";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -30,30 +29,23 @@ export default function Layout({
 }: LayoutProps) {
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "AltFins",
-    "applicationCategory": "FinanceApplication",
-    "operatingSystem": "Web",
+    "@type": "WebSite",
+    "name": title,
     "description": description,
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "ratingCount": "1000"
-    }
+    "url": canonicalUrl,
   };
 
   return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
-      disableTransitionOnChange
-    >
+    <>
+      {/* Skip navigation link for screen readers */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-lg"
+        aria-label="Skip to main content"
+      >
+        Skip to content
+      </a>
+      <div className="min-h-screen flex flex-col bg-background text-foreground">
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -80,16 +72,25 @@ export default function Layout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </Head>
-        <div className="bg-background min-h-screen flex flex-col">
+      
         <Header />
-        <div className="fixed bottom-4 right-4 z-50">
-          <ModeToggle />
-        </div>
-        <main className="flex-1">
+        <main
+          id="main-content"
+          className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 max-w-7xl"
+          role="main"
+          aria-label="Main content"
+        >
           {children}
         </main>
+        <div 
+          className="fixed bottom-4 right-4 z-50"
+          role="region"
+          aria-label="Theme customization"
+        >
+          <ModeToggle aria-label="Toggle dark mode" />
+        </div>
         <Footer />
       </div>
-    </ThemeProvider>
+    </>
   );
 }

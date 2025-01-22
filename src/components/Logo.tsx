@@ -1,8 +1,12 @@
 import React from 'react';
 
-const Logo: React.FC = () => {
+interface LogoProps {
+  className?: string;
+}
+
+const Logo: React.FC<LogoProps> = ({ className }) => {
   return (
-    <div className="text-xl font-bold">Logo</div>
+    <div className={className}>Logo</div>
   );
 };
 

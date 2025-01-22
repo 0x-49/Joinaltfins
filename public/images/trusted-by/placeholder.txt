@@ -1,0 +1,5 @@
+Placeholder for trusted partner logos. Replace these files with actual PNG images:
+- binance.png
+- coinbase.png 
+- coingecko.png
+Recommended size: 128x128 pixels

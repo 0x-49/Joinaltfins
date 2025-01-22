@@ -1,0 +1,5 @@
+Placeholder for chart pattern images. Replace these files with actual PNG images:
+- rising-wedge.png
+- head-shoulders.png
+- bull-flag.png
+Recommended size: 800x600 pixels

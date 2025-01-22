@@ -1,11 +1,11 @@
 import type { AppProps } from 'next/app'
-import '../styles/globals.css';
+import '../styles/globals.css'
+import '../styles/theme.css'
 import { Toaster } from "@/components/ui/toaster"
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
-import { ThemeProvider } from "next-themes";
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import { ThemeProvider } from "@/components/theme-provider"
+import Layout from '@/components/Layout';
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -29,10 +29,7 @@ export default function App({ Component, pageProps }: AppProps) {
     window.onunhandledrejection = (event) => {
       window.parent.postMessage({
         type: 'ERROR',
-        error: {
-          message: event.reason.message,
-          stack: event.reason.stack
-        }
+        error: event.reason
       }, '*');
     };
 
@@ -102,15 +99,11 @@ export default function App({ Component, pageProps }: AppProps) {
   }, [router.events]);
 
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-      <div className="min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-grow">
-          <Component {...pageProps} />
-        </main>
-        <Footer />
+    <ThemeProvider defaultTheme="light" storageKey="altfins-theme">
+      <Layout>
+        <Component {...pageProps} />
         <Toaster />
-      </div>
+      </Layout>
     </ThemeProvider>
   )
 }
