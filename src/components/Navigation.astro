@@ -1,0 +1,137 @@
+---
+import Button from './ui/Button.astro';
+---
+
+<nav class="fixed w-full z-50 bg-gray-900/80 backdrop-blur-sm border-b border-gray-800">
+  <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2">
+      <img src="/altFins.png" alt="altFINS Logo" class="h-8" />
+      <span class="text-xl font-bold">altFINS</span>
+    </a>
+    
+    <!-- Desktop Navigation -->
+    <div class="hidden md:flex items-center gap-6">
+      <a href="/#features" class="text-gray-300 hover:text-white transition">
+        Features
+      </a>
+      <a href="/#trading-tools" class="text-gray-300 hover:text-white transition">
+        Trading Tools
+      </a>
+      <a href="/#education" class="text-gray-300 hover:text-white transition">
+        Education
+      </a>
+      <a href="/#pricing" class="text-gray-300 hover:text-white transition">
+        Pricing
+      </a>
+      <Button variant="outline" class="ml-4" onclick="window.location.href='https://altfins.com/?discountid=344'">
+        Sign In
+      </Button>
+      <Button onclick="window.location.href='https://altfins.com/?discountid=344'">
+        Start Free Trial
+      </Button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="md:hidden">
+      <Button 
+        variant="ghost" 
+        class="p-2"
+        id="mobile-menu-button"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="6" x2="20" y2="6"></line>
+          <line x1="4" y1="18" x2="20" y2="18"></line>
+        </svg>
+      </Button>
+      
+      <div id="mobile-menu" class="hidden fixed inset-0 bg-gray-900/95 backdrop-blur-sm">
+        <div class="container mx-auto px-4 py-8">
+          <Button 
+            variant="ghost" 
+            class="p-2 absolute right-4 top-4"
+            id="mobile-menu-close"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </Button>
+          
+          <div class="flex flex-col gap-4 mt-16">
+            <a href="/#features" class="text-lg text-center">
+              Features
+            </a>
+            <a href="/#trading-tools" class="text-lg text-center">
+              Trading Tools
+            </a>
+            <a href="/#education" class="text-lg text-center">
+              Education
+            </a>
+            <a href="/#pricing" class="text-lg text-center">
+              Pricing
+            </a>
+            <div class="flex flex-col gap-4 mt-8">
+              <Button class="w-full" onclick="window.location.href='https://altfins.com/?discountid=344'">
+                Sign In
+              </Button>
+              <Button variant="outline" class="w-full" onclick="window.location.href='https://altfins.com/?discountid=344'">
+                Start Free Trial
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenuClose = document.getElementById('mobile-menu-close');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileMenuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  });
+
+  mobileMenuClose?.addEventListener('click', () => {
+    mobileMenu?.classList.add('hidden');
+    document.body.style.overflow = '';
+  });
+
+  // Close menu when clicking on a link
+  if (mobileMenu) {
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu!.classList.add('hidden');
+      });
+    });
+  }
+  if (mobileMenu) {
+    document.body.style.overflow = '';
+  }
+</script>
+
+<script>
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const href = anchor.getAttribute('href');
+      if (!href) return;
+      
+      const targetId = href.substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 80, // Adjust for fixed header height
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>

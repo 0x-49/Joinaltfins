@@ -1,0 +1,52 @@
+---
+import Button from './ui/Button.astro';
+
+const plans = [
+  {
+    name: "Starter",
+    price: "Free",
+    description: "Perfect for beginners",
+    features: ["Basic crypto screener", "Limited chart patterns", "Daily trading signals"],
+  },
+  {
+    name: "Pro",
+    price: "$29/month",
+    description: "For serious traders",
+    features: [
+      "Advanced crypto screener",
+      "AI-generated chart patterns",
+      "Real-time trading signals",
+      "On-chain data analysis",
+    ],
+  },
+  {
+    name: "Enterprise",
+    price: "Custom",
+    description: "For institutions and professionals",
+    features: ["All Pro features", "API access", "Dedicated support", "Custom integrations"],
+  },
+];
+---
+
+<section id="pricing" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
+  <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">Choose Your Plan</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    {plans.map((plan) => (
+      <div class="bg-gray-800 border-gray-700 rounded-lg overflow-hidden">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">{plan.name}</h3>
+          <p class="text-gray-400 mb-6">{plan.description}</p>
+          <p class="text-3xl font-bold mb-4">{plan.price}</p>
+          <ul class="space-y-2 mb-6">
+            {plan.features.map((feature) => (
+              <li>✓ {feature}</li>
+            ))}
+          </ul>
+        </div>
+        <div class="p-6 pt-0">
+          <Button class="w-full bg-blue-600 hover:bg-blue-700" onclick="window.location.href='https://altfins.com/?discountid=344'">Join altFINS</Button>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

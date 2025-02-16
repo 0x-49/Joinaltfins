@@ -1,0 +1,61 @@
+---
+const icons = {
+  info: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-teal-500 mb-4">
+    <circle cx="12" cy="12" r="10"/>
+    <path d="M12 16v-4"/>
+    <path d="M12 8h.01"/>
+  </svg>`,
+  clock: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-teal-500 mb-4">
+    <circle cx="12" cy="12" r="10"/>
+    <polyline points="12 6 12 12 16 14"/>
+  </svg>`,
+  brain: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-teal-500 mb-4">
+    <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/>
+    <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/>
+  </svg>`,
+  trendingUp: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-teal-500 mb-4">
+    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+    <polyline points="16 7 22 7 22 13"/>
+  </svg>`
+};
+
+const problems = [
+  {
+    title: "Information Overload",
+    description:
+      "We aggregate key data points and analytics in one place, streamlining the information needed for trading.",
+    icon: icons.info,
+  },
+  {
+    title: "Time-Consuming Research",
+    description: "Our automated screening tools, alerts, and news aggregation save you valuable time.",
+    icon: icons.clock,
+  },
+  {
+    title: "Emotional Decision-Making",
+    description: "We provide objective, data-driven analysis and signals to help you make rational choices.",
+    icon: icons.brain,
+  },
+  {
+    title: "Lack of Technical Analysis Expertise",
+    description:
+      "Our pre-built tools and educational resources, including a crypto trading course, help you understand market trends.",
+    icon: icons.trendingUp,
+  },
+];
+---
+
+<section class="py-20 px-4 sm:px-6 lg:px-8">
+  <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">Problems We Solve</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+    {problems.map((problem) => (
+      <div class="bg-gray-800 border-gray-700 rounded-lg overflow-hidden">
+        <div class="p-6">
+          <Fragment set:html={problem.icon} />
+          <h3 class="text-xl font-semibold mb-2">{problem.title}</h3>
+          <p class="text-gray-400">{problem.description}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

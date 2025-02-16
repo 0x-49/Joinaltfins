@@ -1,0 +1,116 @@
+---
+import Button from './ui/Button.astro';
+
+const icons = {
+  graduationCap: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-blue-400 mb-4">
+    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+    <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+  </svg>`,
+  play: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-green-400 mb-4">
+    <polygon points="5 3 19 12 5 21 5 3"/>
+  </svg>`,
+  bookOpen: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-purple-400 mb-4">
+    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+  </svg>`,
+  trophy: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-yellow-400">
+    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+    <path d="M4 22h16"/>
+    <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+    <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+    <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+  </svg>`,
+  users: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-blue-400">
+    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+    <circle cx="9" cy="7" r="4"/>
+    <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+  </svg>`,
+  arrowRight: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+    <path d="M5 12h14"/>
+    <path d="m12 5 7 7-7 7"/>
+  </svg>`,
+  playLarge: `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-16 h-16 text-white opacity-80">
+    <polygon points="5 3 19 12 5 21 5 3"/>
+  </svg>`
+};
+---
+
+<section id="education" class="py-20">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        Learn to Trade Like a Pro
+      </h2>
+      <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+        Access comprehensive educational resources designed for both beginners and experienced traders
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+      <!-- Trading Course -->
+      <div class="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-800/70 transition">
+        <Fragment set:html={icons.graduationCap} />
+        <h3 class="text-xl font-semibold mb-3">Crypto Trading Course</h3>
+        <p class="text-gray-400 mb-4">
+          Master the fundamentals of crypto trading through our structured course
+        </p>
+        <ul class="text-gray-300 space-y-2">
+          <li>• Technical analysis basics</li>
+          <li>• Chart pattern recognition</li>
+          <li>• Risk management strategies</li>
+          <li>• Trading psychology</li>
+        </ul>
+      </div>
+
+      <!-- Video Tutorials -->
+      <div class="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-800/70 transition">
+        <Fragment set:html={icons.play} />
+        <h3 class="text-xl font-semibold mb-3">Video Tutorials</h3>
+        <p class="text-gray-400 mb-4">
+          Watch step-by-step tutorials on using altFINS tools effectively
+        </p>
+        <ul class="text-gray-300 space-y-2">
+          <li>• Platform walkthrough</li>
+          <li>• Tool demonstrations</li>
+          <li>• Strategy guides</li>
+          <li>• Live trading examples</li>
+        </ul>
+      </div>
+
+      <!-- Trading Guides -->
+      <div class="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-800/70 transition">
+        <Fragment set:html={icons.bookOpen} />
+        <h3 class="text-xl font-semibold mb-3">Trading Guides</h3>
+        <p class="text-gray-400 mb-4">
+          In-depth guides on various trading strategies and market analysis
+        </p>
+        <ul class="text-gray-300 space-y-2">
+          <li>• Strategy breakdowns</li>
+          <li>• Market analysis guides</li>
+          <li>• Indicator tutorials</li>
+          <li>• Best practices</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Community Section -->
+    <div class="text-center">
+      <h3 class="text-2xl font-bold mb-4">Join Our Trading Community</h3>
+      <p class="text-gray-300 mb-8 max-w-2xl mx-auto">
+        Connect with fellow traders, share insights, and learn from experienced mentors in our active trading community.
+      </p>
+      <a href="https://altfins.com/?discountid=344">
+        <Button 
+          variant="outline" 
+          size="lg" 
+        >
+          Join Community
+          <Fragment set:html={icons.arrowRight} />
+        </Button>
+      </a>
+      
+    </div>
+  </div>
+</section>

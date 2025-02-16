@@ -1,11 +1,31 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Hero from '../components/Hero.astro';
+import Features from '../components/Features.astro';
+import TradingTools from '../components/TradingTools.astro';
+import ProblemsSolved from '../components/ProblemsSolved.astro';
+import Education from '../components/Education.astro';
+import ForWhom from '../components/ForWhom.astro';
+import Pricing from '../components/Pricing.astro';
+import Footer from '../components/Footer.astro';
+import CryptoTrading from '../components/CryptoTrading.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+  <Navigation />
+  <main>
+    <Hero />
+    <Features />
+    <TradingTools />
+    <ProblemsSolved />
+    <CryptoTrading />
+    <Education />
+    <ForWhom />
+    <Pricing />
+  </main>
+  <Footer />
 </Layout>

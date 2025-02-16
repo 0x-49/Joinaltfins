@@ -1,0 +1,1662 @@
+
+================================================================================
+FILE: src\components\CryptoTrading.astro
+================================================================================
+
+---
+---
+
+<section class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center gap-8">
+    <!-- Course Info -->
+    <div class="w-full md:w-1/2 space-y-6">
+      <h2 class="text-4xl font-bold text-gray-900">Complete Crypto Trading Course</h2>
+      <p class="text-lg text-gray-600">Master crypto trading from basics to advanced strategies with our comprehensive course. Learn at your own pace with lifetime access to all materials.</p>
+      
+      <ul class="space-y-4">
+        <li class="flex items-center space-x-3">
+          <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+          </svg>
+          <span class="text-gray-700">20+ hours of video content</span>
+        </li>
+        <li class="flex items-center space-x-3">
+          <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+          </svg>
+          <span class="text-gray-700">Active community support</span>
+        </li>
+        <li class="flex items-center space-x-3">
+          <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+          </svg>
+          <span class="text-gray-700">Certificate upon completion</span>
+        </li>
+      </ul>
+
+      <a href="https://altfins.com/?discountid=344" class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+        Start Learning Now
+      </a>
+      <a href="https://altfins.com/?discountid=344" class="inline-block ml-4 px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors">
+        Join Community
+      </a>
+    </div>
+
+    <!-- Video Section -->
+    <div id="video" class="w-full md:w-1/2 relative">
+      <div class="aspect-w-16 aspect-h-9">
+        <iframe
+          class="w-full h-full rounded-lg shadow-lg"
+          src="https://www.youtube.com/embed/Ffc0fS4YEa0"
+          title="Crypto Trading Course Introduction"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+================================================================================
+FILE: src\components\Education.astro
+================================================================================
+
+---
+import Button from './ui/Button.astro';
+
+const icons = {
+  graduationCap: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-blue-400 mb-4">
+    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+    <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+  </svg>`,
+  play: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-green-400 mb-4">
+    <polygon points="5 3 19 12 5 21 5 3"/>
+  </svg>`,
+  bookOpen: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-purple-400 mb-4">
+    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+  </svg>`,
+  trophy: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-yellow-400">
+    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+    <path d="M4 22h16"/>
+    <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+    <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+    <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+  </svg>`,
+  users: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-blue-400">
+    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+    <circle cx="9" cy="7" r="4"/>
+    <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+  </svg>`,
+  arrowRight: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+    <path d="M5 12h14"/>
+    <path d="m12 5 7 7-7 7"/>
+  </svg>`,
+  playLarge: `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-16 h-16 text-white opacity-80">
+    <polygon points="5 3 19 12 5 21 5 3"/>
+  </svg>`
+};
+---
+
+<section id="education" class="py-20">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        Learn to Trade Like a Pro
+      </h2>
+      <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+        Access comprehensive educational resources designed for both beginners and experienced traders
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+      <!-- Trading Course -->
+      <div class="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-800/70 transition">
+        <Fragment set:html={icons.graduationCap} />
+        <h3 class="text-xl font-semibold mb-3">Crypto Trading Course</h3>
+        <p class="text-gray-400 mb-4">
+          Master the fundamentals of crypto trading through our structured course
+        </p>
+        <ul class="text-gray-300 space-y-2">
+          <li>• Technical analysis basics</li>
+          <li>• Chart pattern recognition</li>
+          <li>• Risk management strategies</li>
+          <li>• Trading psychology</li>
+        </ul>
+      </div>
+
+      <!-- Video Tutorials -->
+      <div class="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-800/70 transition">
+        <Fragment set:html={icons.play} />
+        <h3 class="text-xl font-semibold mb-3">Video Tutorials</h3>
+        <p class="text-gray-400 mb-4">
+          Watch step-by-step tutorials on using altFINS tools effectively
+        </p>
+        <ul class="text-gray-300 space-y-2">
+          <li>• Platform walkthrough</li>
+          <li>• Tool demonstrations</li>
+          <li>• Strategy guides</li>
+          <li>• Live trading examples</li>
+        </ul>
+      </div>
+
+      <!-- Trading Guides -->
+      <div class="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-800/70 transition">
+        <Fragment set:html={icons.bookOpen} />
+        <h3 class="text-xl font-semibold mb-3">Trading Guides</h3>
+        <p class="text-gray-400 mb-4">
+          In-depth guides on various trading strategies and market analysis
+        </p>
+        <ul class="text-gray-300 space-y-2">
+          <li>• Strategy breakdowns</li>
+          <li>• Market analysis guides</li>
+          <li>• Indicator tutorials</li>
+          <li>• Best practices</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Community Section -->
+    <div class="text-center">
+      <h3 class="text-2xl font-bold mb-4">Join Our Trading Community</h3>
+      <p class="text-gray-300 mb-8 max-w-2xl mx-auto">
+        Connect with fellow traders, share insights, and learn from experienced mentors in our active trading community.
+      </p>
+      <a href="https://altfins.com/?discountid=344">
+  <Button 
+    variant="outline" 
+    size="lg" 
+    className="gap-2"
+  >
+    Join Community
+    <Fragment set:html={icons.arrowRight} />
+  </Button>
+</a>
+
+    </div>
+  </div>
+</section>
+
+
+================================================================================
+FILE: src\components\Features.astro
+================================================================================
+
+---
+const features = [
+  {
+    title: "Crypto Screener",
+    description: "Find the best trading opportunities with our advanced crypto screener.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-blue-500 mb-4">
+      <circle cx="11" cy="11" r="8"></circle>
+      <path d="m21 21-4.3-4.3"></path>
+    </svg>`,
+  },
+  {
+    title: "AI-Generated Chart Patterns",
+    description: "Leverage AI to identify potential trading patterns and signals.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-blue-500 mb-4">
+      <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+      <polyline points="16 7 22 7 22 13"></polyline>
+    </svg>`,
+  },
+  {
+    title: "Real-Time Trading Signals",
+    description: "Get actionable insights with our real-time trading signals.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-blue-500 mb-4">
+      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+    </svg>`,
+  },
+  {
+    title: "Educational Resources",
+    description: "Learn and improve your trading skills with our comprehensive resources.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-blue-500 mb-4">
+      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+      <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+    </svg>`,
+  },
+];
+---
+
+<section class="py-20 px-4 sm:px-6 lg:px-8">
+  <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">Powerful Features for Smart Trading</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    {features.map((feature) => (
+      <div class="bg-gray-800 border-gray-700 rounded-lg overflow-hidden">
+        <div class="p-6">
+          <Fragment set:html={feature.icon} />
+          <h3 class="text-lg font-semibold mb-2">{feature.title}</h3>
+          <p class="text-gray-400">{feature.description}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+
+================================================================================
+FILE: src\components\Footer.astro
+================================================================================
+
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-gray-900 text-gray-300 py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div>
+      <h3 class="text-lg font-semibold mb-4">altFINS</h3>
+      <p>Empowering crypto traders with advanced analytics and AI-powered insights.</p>
+    </div>
+    <div>
+      <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+      <ul class="space-y-2">
+        <li>
+          <a href="/" class="hover:text-white">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="/#features" class="hover:text-white">
+            Features
+          </a>
+        </li>
+        <li>
+          <a href="/#pricing" class="hover:text-white">
+            Pricing
+          </a>
+        </li>
+        <li>
+          <a href="/about" class="hover:text-white">
+            About Us
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="text-lg font-semibold mb-4">Legal</h3>
+      <ul class="space-y-2">
+        <li>
+          <a href="/terms" class="hover:text-white">
+            Terms of Service
+          </a>
+        </li>
+        <li>
+          <a href="/privacy" class="hover:text-white">
+            Privacy Policy
+          </a>
+        </li>
+        <li>
+          <a href="/cookies" class="hover:text-white">
+            Cookie Policy
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="text-lg font-semibold mb-4">Connect</h3>
+      <div class="flex space-x-4">
+        <a 
+          href="https://t.me/altfinsofficial" 
+          class="hover:text-white"
+          aria-label="Join our Telegram channel"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+        <a 
+          href="https://www.youtube.com/channel/UCD9ITNcSok233Vov24gHpGQ" 
+          class="hover:text-white"
+          aria-label="Visit our YouTube channel"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+          </svg>
+        </a>
+        <a 
+          href="https://twitter.com/AltfinsA" 
+          class="hover:text-white"
+          aria-label="Follow us on Twitter"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+          </svg>
+        </a>
+        <a 
+          href="https://discord.com/invite/kgHHyEDC92" 
+          class="hover:text-white"
+          aria-label="Join our Discord community"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="mt-4">
+        <p class="text-sm">(800) 578-9633</p>
+        <p class="text-sm">marketing@altfins.com</p>
+        <p class="text-sm">2500-2510 Village Green Pl, Champaign, IL 61822</p>
+      </div>
+    </div>
+  </div>
+  <div class="mt-8 pt-8 border-t border-gray-800 text-center">
+    <p>&copy; {currentYear} altFINS. All rights reserved.</p>
+  </div>
+</footer>
+
+
+================================================================================
+FILE: src\components\ForWhom.astro
+================================================================================
+
+---
+const usersIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-16 h-16 text-blue-500 mx-auto mb-6">
+  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+  <circle cx="9" cy="7" r="4"/>
+  <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+</svg>`;
+---
+
+<section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
+  <div class="max-w-4xl mx-auto text-center">
+    <Fragment set:html={usersIcon} />
+    <h2 class="text-3xl sm:text-4xl font-bold mb-6">Who is altFINS for?</h2>
+    <p class="text-xl mb-8">
+      altFINS is designed for anyone looking to trade or invest in cryptocurrency, from beginners to advanced users.
+      Our platform caters to those who want to save time on research and make data-driven decisions in the crypto
+      market.
+    </p>
+    <ul class="text-left text-lg space-y-4">
+      <li>✓ Novice traders looking to learn and grow</li>
+      <li>✓ Experienced investors seeking advanced analytics</li>
+      <li>✓ Data-driven decision makers in the crypto space</li>
+      <li>✓ Time-conscious traders who need quick, reliable insights</li>
+    </ul>
+  </div>
+</section>
+
+
+================================================================================
+FILE: src\components\Hero.astro
+================================================================================
+
+---
+import Button from './ui/Button.astro';
+import Dialog from './ui/Dialog.astro';
+---
+
+<div class="relative pt-20 pb-16 md:pt-32 md:pb-24">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 bg-gray-800/50 px-4 py-2 rounded-full mb-8">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-green-400">
+          <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+          <polyline points="16 7 22 7 22 13"></polyline>
+        </svg>
+        <span class="text-sm">78% Success Rate in Pattern Recognition (Based on backtested data)</span>
+      </div>
+      
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+        AI-Powered Crypto Trading Analytics
+      </h1>
+      
+      <p class="text-xl md:text-2xl text-gray-300 mb-8">
+        Make smarter trading decisions with real-time AI analysis, advanced technical indicators, and comprehensive market data.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+        <Button size="lg" class="gap-2">
+          Start Free Trial 
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </Button>
+      
+        <Dialog
+          title="Platform Demo"
+          description="Watch how altFINS can help you make better trading decisions"
+          videoUrl="https://www.youtube.com/embed/Ffc0fS4YEa0?si=_oISSTK7YibYdB6h"
+          triggerClass="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium h-11 px-8 border border-input bg-background hover:bg-accent hover:text-accent-foreground"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          Watch Demo
+        </Dialog>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+        <div class="bg-gray-800/50 p-6 rounded-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-blue-400 mb-4">
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <polyline points="2 20 12 12 22 20"></polyline>
+            <polyline points="2 4 12 12 22 4"></polyline>
+          </svg>
+          <h3 class="text-lg font-semibold mb-2">Real-Time Analysis</h3>
+          <p class="text-gray-400">Get instant insights on market trends and trading opportunities</p>
+        </div>
+        <div class="bg-gray-800/50 p-6 rounded-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-purple-400 mb-4">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M12 3a9 9 0 0 0 9 9 9 9 0 0 0-9 9 9 9 0 0 0-9-9 9 9 0 0 0 9-9Z"></path>
+          </svg>
+          <h3 class="text-lg font-semibold mb-2">AI Pattern Recognition</h3>
+          <p class="text-gray-400">Identify profitable trading patterns with 78% accuracy</p>
+        </div>
+        <div class="bg-gray-800/50 p-6 rounded-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-green-400 mb-4">
+            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+            <polyline points="16 7 22 7 22 13"></polyline>
+          </svg>
+          <h3 class="text-lg font-semibold mb-2">Advanced Indicators</h3>
+          <p class="text-gray-400">Access 120+ technical indicators for deep market analysis</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Background gradient effect -->
+  <div class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/20 via-gray-900 to-gray-900"></div>
+</div>
+
+
+================================================================================
+FILE: src\components\Navigation.astro
+================================================================================
+
+---
+import Button from './ui/Button.astro';
+---
+
+<nav class="fixed w-full z-50 bg-gray-900/80 backdrop-blur-sm border-b border-gray-800">
+  <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+    <a href="/" class="text-xl font-bold">
+      altFINS
+    </a>
+    
+    <!-- Desktop Navigation -->
+    <div class="hidden md:flex items-center gap-6">
+      <a href="/#features" class="text-gray-300 hover:text-white transition">
+        Features
+      </a>
+      <a href="/#trading-tools" class="text-gray-300 hover:text-white transition">
+        Trading Tools
+      </a>
+      <a href="/#education" class="text-gray-300 hover:text-white transition">
+        Education
+      </a>
+      <a href="/#pricing" class="text-gray-300 hover:text-white transition">
+        Pricing
+      </a>
+      <Button variant="outline" class="ml-4" onclick="window.location.href='https://altfins.com/?discountid=344'">
+        Sign In
+      </Button>
+      <Button onclick="window.location.href='https://altfins.com/?discountid=344'">
+        Start Free Trial
+      </Button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="md:hidden">
+      <Button 
+        variant="ghost" 
+        class="p-2"
+        id="mobile-menu-button"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="6" x2="20" y2="6"></line>
+          <line x1="4" y1="18" x2="20" y2="18"></line>
+        </svg>
+      </Button>
+      
+      <div id="mobile-menu" class="hidden fixed inset-0 bg-gray-900/95 backdrop-blur-sm">
+        <div class="container mx-auto px-4 py-8">
+          <Button 
+            variant="ghost" 
+            class="p-2 absolute right-4 top-4"
+            id="mobile-menu-close"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </Button>
+          
+          <div class="flex flex-col gap-4 mt-16">
+            <a href="/#features" class="text-lg text-center">
+              Features
+            </a>
+            <a href="/#trading-tools" class="text-lg text-center">
+              Trading Tools
+            </a>
+            <a href="/#education" class="text-lg text-center">
+              Education
+            </a>
+            <a href="/#pricing" class="text-lg text-center">
+              Pricing
+            </a>
+            <div class="flex flex-col gap-4 mt-8">
+              <Button class="w-full" onclick="window.location.href='https://altfins.com/?discountid=344'">
+                Sign In
+              </Button>
+              <Button variant="outline" class="w-full" onclick="window.location.href='https://altfins.com/?discountid=344'">
+                Start Free Trial
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenuClose = document.getElementById('mobile-menu-close');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileMenuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  });
+
+  mobileMenuClose?.addEventListener('click', () => {
+    mobileMenu?.classList.add('hidden');
+    document.body.style.overflow = '';
+  });
+
+  // Close menu when clicking on a link
+  if (mobileMenu) {
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu!.classList.add('hidden');
+      });
+    });
+  }
+  if (mobileMenu) {
+    document.body.style.overflow = '';
+  }
+</script>
+
+<script>
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const href = anchor.getAttribute('href');
+      if (!href) return;
+      
+      const targetId = href.substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 80, // Adjust for fixed header height
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>
+
+
+================================================================================
+FILE: src\components\Pricing.astro
+================================================================================
+
+---
+import Button from './ui/Button.astro';
+
+const plans = [
+  {
+    name: "Starter",
+    price: "Free",
+    description: "Perfect for beginners",
+    features: ["Basic crypto screener", "Limited chart patterns", "Daily trading signals"],
+  },
+  {
+    name: "Pro",
+    price: "$29/month",
+    description: "For serious traders",
+    features: [
+      "Advanced crypto screener",
+      "AI-generated chart patterns",
+      "Real-time trading signals",
+      "On-chain data analysis",
+    ],
+  },
+  {
+    name: "Enterprise",
+    price: "Custom",
+    description: "For institutions and professionals",
+    features: ["All Pro features", "API access", "Dedicated support", "Custom integrations"],
+  },
+];
+---
+
+<section id="pricing" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
+  <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">Choose Your Plan</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    {plans.map((plan) => (
+      <div class="bg-gray-800 border-gray-700 rounded-lg overflow-hidden">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">{plan.name}</h3>
+          <p class="text-gray-400 mb-6">{plan.description}</p>
+          <p class="text-3xl font-bold mb-4">{plan.price}</p>
+          <ul class="space-y-2 mb-6">
+            {plan.features.map((feature) => (
+              <li>✓ {feature}</li>
+            ))}
+          </ul>
+        </div>
+        <div class="p-6 pt-0">
+          <Button class="w-full bg-blue-600 hover:bg-blue-700" onclick="window.location.href='https://altfins.com/?discountid=344'">Join altFINS</Button>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+
+================================================================================
+FILE: src\components\ProblemsSolved.astro
+================================================================================
+
+---
+const icons = {
+  info: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-teal-500 mb-4">
+    <circle cx="12" cy="12" r="10"/>
+    <path d="M12 16v-4"/>
+    <path d="M12 8h.01"/>
+  </svg>`,
+  clock: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-teal-500 mb-4">
+    <circle cx="12" cy="12" r="10"/>
+    <polyline points="12 6 12 12 16 14"/>
+  </svg>`,
+  brain: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-teal-500 mb-4">
+    <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/>
+    <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/>
+  </svg>`,
+  trendingUp: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-teal-500 mb-4">
+    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+    <polyline points="16 7 22 7 22 13"/>
+  </svg>`
+};
+
+const problems = [
+  {
+    title: "Information Overload",
+    description:
+      "We aggregate key data points and analytics in one place, streamlining the information needed for trading.",
+    icon: icons.info,
+  },
+  {
+    title: "Time-Consuming Research",
+    description: "Our automated screening tools, alerts, and news aggregation save you valuable time.",
+    icon: icons.clock,
+  },
+  {
+    title: "Emotional Decision-Making",
+    description: "We provide objective, data-driven analysis and signals to help you make rational choices.",
+    icon: icons.brain,
+  },
+  {
+    title: "Lack of Technical Analysis Expertise",
+    description:
+      "Our pre-built tools and educational resources, including a crypto trading course, help you understand market trends.",
+    icon: icons.trendingUp,
+  },
+];
+---
+
+<section class="py-20 px-4 sm:px-6 lg:px-8">
+  <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">Problems We Solve</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+    {problems.map((problem) => (
+      <div class="bg-gray-800 border-gray-700 rounded-lg overflow-hidden">
+        <div class="p-6">
+          <Fragment set:html={problem.icon} />
+          <h3 class="text-xl font-semibold mb-2">{problem.title}</h3>
+          <p class="text-gray-400">{problem.description}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+
+================================================================================
+FILE: src\components\TradingTools.astro
+================================================================================
+
+---
+import Button from './ui/Button.astro';
+
+const icons = {
+  brainCircuit: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-purple-400 mb-4">
+    <path d="M12 2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-4z"/>
+    <path d="M18 16a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v4z"/>
+    <path d="M2 8h3m-3 4h3m-3 4h3"/>
+    <path d="M19 8h3m-3 4h3m-3 4h3"/>
+  </svg>`,
+  lineChart: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-blue-400 mb-4">
+    <path d="M3 3v18h18"/>
+    <path d="m19 9-5 5-4-4-3 3"/>
+  </svg>`,
+  filter: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-green-400 mb-4">
+    <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+  </svg>`,
+  signal: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-yellow-400 mb-4">
+    <path d="M2 20h.01"/>
+    <path d="M7 20v-4"/>
+    <path d="M12 20v-8"/>
+    <path d="M17 20V8"/>
+    <path d="M22 4v16"/>
+  </svg>`,
+  barChart: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-red-400 mb-4">
+    <line x1="12" y1="20" x2="12" y2="10"/>
+    <line x1="18" y1="20" x2="18" y2="4"/>
+    <line x1="6" y1="20" x2="6" y2="16"/>
+  </svg>`,
+  circleDollarSign: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-teal-400 mb-4">
+    <circle cx="12" cy="12" r="10"/>
+    <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/>
+    <path d="M12 18V6"/>
+  </svg>`
+};
+
+const tools = [
+  {
+    icon: icons.brainCircuit,
+    title: "AI Pattern Recognition",
+    description: "Our AI identifies profitable trading patterns with 78% accuracy, including triangles, wedges, and channels",
+    features: [
+      "Real-time pattern detection",
+      "Success rate validation",
+      "Historical pattern analysis"
+    ]
+  },
+  {
+    icon: icons.lineChart,
+    title: "Technical Analysis",
+    description: "Access over 120 technical indicators and advanced charting tools",
+    features: [
+      "Moving averages",
+      "RSI, MACD, and more",
+      "Custom indicator settings"
+    ]
+  },
+  {
+    icon: icons.filter,
+    title: "Crypto Screener",
+    description: "Filter and find cryptocurrencies matching your trading strategy",
+    features: [
+      "30+ preset filters",
+      "Custom screening rules",
+      "Real-time updates"
+    ]
+  },
+  {
+    icon: icons.signal,
+    title: "Trading Signals",
+    description: "Get actionable trading signals based on technical analysis",
+    features: [
+      "Buy/Sell signals",
+      "Signal strength indicators",
+      "Performance tracking"
+    ]
+  },
+  {
+    icon: icons.barChart,
+    title: "Market Analysis",
+    description: "Comprehensive market data and sentiment analysis",
+    features: [
+      "Market trends",
+      "Volume analysis",
+      "Social sentiment"
+    ]
+  },
+  {
+    icon: icons.circleDollarSign,
+    title: "Portfolio Tracking",
+    description: "Track and analyze your crypto portfolio performance",
+    features: [
+      "Performance metrics",
+      "PnL tracking",
+      "Portfolio analytics"
+    ]
+  }
+];
+---
+
+<section id="trading-tools" class="py-20">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        Comprehensive Trading Tools
+      </h2>
+      <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+        Access a complete suite of professional-grade trading tools powered by AI and real-time data
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {tools.map((tool) => (
+        <div class="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-800/70 transition">
+          <Fragment set:html={tool.icon} />
+          <h3 class="text-xl font-semibold mb-3">{tool.title}</h3>
+          <p class="text-gray-400 mb-4">
+            {tool.description}
+          </p>
+          <ul class="text-gray-300 space-y-2 mb-6">
+            {tool.features.map((feature) => (
+              <li>• {feature}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center mt-12">
+      <Button size="lg" class="gap-2">
+        Try All Tools Free
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14"/>
+          <path d="m12 5 7 7-7 7"/>
+        </svg>
+      </Button>
+    </div>
+  </div>
+</section>
+
+
+================================================================================
+FILE: src\components\ui\Button.astro
+================================================================================
+
+---
+interface Props {
+  variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link';
+  size?: 'default' | 'sm' | 'lg' | 'icon';
+  class?: string;
+  type?: 'button' | 'submit' | 'reset';
+  onclick?: string;
+  id?: string;
+}
+
+const {
+  variant = 'default',
+  size = 'default',
+  class: className = '',
+  type = 'button',
+  ...rest
+} = Astro.props;
+
+const baseStyles = "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0";
+
+const variants = {
+  default: "bg-primary text-primary-foreground hover:bg-primary/90",
+  destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+  outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+  secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+  ghost: "hover:bg-accent hover:text-accent-foreground",
+  link: "text-primary underline-offset-4 hover:underline"
+};
+
+const sizes = {
+  default: "h-10 px-4 py-2",
+  sm: "h-9 rounded-md px-3",
+  lg: "h-11 rounded-md px-8",
+  icon: "h-10 w-10"
+};
+
+const variantStyles = variants[variant];
+const sizeStyles = sizes[size];
+const classes = `${baseStyles} ${variantStyles} ${sizeStyles} ${className}`;
+---
+
+<button
+  type={type}
+  class={classes}
+  {...rest}
+>
+  <slot />
+</button>
+
+
+================================================================================
+FILE: src\components\ui\Dialog.astro
+================================================================================
+
+---
+interface Props {
+  title: string;
+  description: string;
+  videoUrl: string;
+  triggerClass?: string;
+}
+
+const { title, description, videoUrl, triggerClass = '' } = Astro.props;
+---
+
+<dialog id="demo-dialog" class="bg-background text-foreground p-6 rounded-lg shadow-xl backdrop:bg-black/50 backdrop:backdrop-blur-sm [&[open]]:grid [&:not([open])]:hidden w-[90vw] max-w-2xl">
+  <div class="grid gap-4">
+    <div class="flex justify-between items-start">
+      <div>
+        <h2 class="text-lg font-semibold">{title}</h2>
+        <p class="text-gray-400">{description}</p>
+      </div>
+      <button 
+        onclick="this.closest('dialog').close()"
+        class="text-gray-400 hover:text-gray-50"
+      >
+        ✕
+      </button>
+    </div>
+    
+    <div class="aspect-video">
+      <iframe
+        class="w-full h-full"
+        src={videoUrl}
+        title="Platform Demo"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      />
+    </div>
+  </div>
+</dialog>
+
+<button 
+  onclick="document.getElementById('demo-dialog').showModal()" 
+  class={triggerClass}
+>
+  <slot />
+</button>
+
+<script>
+  // Close dialog when clicking outside
+  const dialog = document.getElementById('demo-dialog');
+  dialog?.addEventListener('click', (e) => {
+    const dialogDimensions = dialog.getBoundingClientRect();
+    if (
+      e.clientX < dialogDimensions.left ||
+      e.clientX > dialogDimensions.right ||
+      e.clientY < dialogDimensions.top ||
+      e.clientY > dialogDimensions.bottom
+    ) {
+      dialog.close();
+    }
+  });
+</script>
+
+
+================================================================================
+FILE: src\components\Welcome.astro
+================================================================================
+
+---
+import astroLogo from '../assets/astro.svg';
+import background from '../assets/background.svg';
+---
+
+<div id="container">
+	<img id="background" src={background.src} alt="" fetchpriority="high" />
+	<main>
+		<section id="hero">
+			<a href="https://astro.build"
+				><img src={astroLogo.src} width="115" height="48" alt="Astro Homepage" /></a
+			>
+			<h1>
+				To get started, open the <code><pre>src/pages</pre></code> directory in your project.
+			</h1>
+			<section id="links">
+				<a class="button" href="https://docs.astro.build">Read our docs</a>
+				<a href="https://astro.build/chat"
+					>Join our Discord <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36"
+						><path
+							fill="currentColor"
+							d="M107.7 8.07A105.15 105.15 0 0 0 81.47 0a72.06 72.06 0 0 0-3.36 6.83 97.68 97.68 0 0 0-29.11 0A72.37 72.37 0 0 0 45.64 0a105.89 105.89 0 0 0-26.25 8.09C2.79 32.65-1.71 56.6.54 80.21a105.73 105.73 0 0 0 32.17 16.15 77.7 77.7 0 0 0 6.89-11.11 68.42 68.42 0 0 1-10.85-5.18c.91-.66 1.8-1.34 2.66-2a75.57 75.57 0 0 0 64.32 0c.87.71 1.76 1.39 2.66 2a68.68 68.68 0 0 1-10.87 5.19 77 77 0 0 0 6.89 11.1 105.25 105.25 0 0 0 32.19-16.14c2.64-27.38-4.51-51.11-18.9-72.15ZM42.45 65.69C36.18 65.69 31 60 31 53s5-12.74 11.43-12.74S54 46 53.89 53s-5.05 12.69-11.44 12.69Zm42.24 0C78.41 65.69 73.25 60 73.25 53s5-12.74 11.44-12.74S96.23 46 96.12 53s-5.04 12.69-11.43 12.69Z"
+						></path></svg
+					>
+				</a>
+			</section>
+		</section>
+	</main>
+
+	<a href="https://astro.build/blog/astro-5/" id="news" class="box">
+		<svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"
+			><path
+				d="M24.667 12c1.333 1.414 2 3.192 2 5.334 0 4.62-4.934 5.7-7.334 12C18.444 28.567 18 27.456 18 26c0-4.642 6.667-7.053 6.667-14Zm-5.334-5.333c1.6 1.65 2.4 3.43 2.4 5.333 0 6.602-8.06 7.59-6.4 17.334C13.111 27.787 12 25.564 12 22.666c0-4.434 7.333-8 7.333-16Zm-6-5.333C15.111 3.555 16 5.556 16 7.333c0 8.333-11.333 10.962-5.333 22-3.488-.774-6-4-6-8 0-8.667 8.666-10 8.666-20Z"
+				fill="#111827"></path></svg
+		>
+		<h2>What's New in Astro 5.0?</h2>
+		<p>
+			From content layers to server islands, click to learn more about the new features and
+			improvements in Astro 5.0
+		</p>
+	</a>
+</div>
+
+<style>
+	#background {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		filter: blur(100px);
+	}
+
+	#container {
+		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+		height: 100%;
+	}
+
+	main {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+	}
+
+	#hero {
+		display: flex;
+		align-items: start;
+		flex-direction: column;
+		justify-content: center;
+		padding: 16px;
+	}
+
+	h1 {
+		font-size: 22px;
+		margin-top: 0.25em;
+	}
+
+	#links {
+		display: flex;
+		gap: 16px;
+	}
+
+	#links a {
+		display: flex;
+		align-items: center;
+		padding: 10px 12px;
+		color: #111827;
+		text-decoration: none;
+		transition: color 0.2s;
+	}
+
+	#links a:hover {
+		color: rgb(78, 80, 86);
+	}
+
+	#links a svg {
+		height: 1em;
+		margin-left: 8px;
+	}
+
+	#links a.button {
+		color: white;
+		background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+		box-shadow:
+			inset 0 0 0 1px rgba(255, 255, 255, 0.12),
+			inset 0 -2px 0 rgba(0, 0, 0, 0.24);
+		border-radius: 10px;
+	}
+
+	#links a.button:hover {
+		color: rgb(230, 230, 230);
+		box-shadow: none;
+	}
+
+	pre {
+		font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas,
+			'DejaVu Sans Mono', monospace;
+		font-weight: normal;
+		background: linear-gradient(14deg, #d83333 0%, #f041ff 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		margin: 0;
+	}
+
+	h2 {
+		margin: 0 0 1em;
+		font-weight: normal;
+		color: #111827;
+		font-size: 20px;
+	}
+
+	p {
+		color: #4b5563;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: -0.006em;
+		margin: 0;
+	}
+
+	code {
+		display: inline-block;
+		background:
+			linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%) padding-box,
+			linear-gradient(155deg, #d83333 0%, #f041ff 18%, #f5cee7 45%) border-box;
+		border-radius: 8px;
+		border: 1px solid transparent;
+		padding: 6px 8px;
+	}
+
+	.box {
+		padding: 16px;
+		background: rgba(255, 255, 255, 1);
+		border-radius: 16px;
+		border: 1px solid white;
+	}
+
+	#news {
+		position: absolute;
+		bottom: 16px;
+		right: 16px;
+		max-width: 300px;
+		text-decoration: none;
+		transition: background 0.2s;
+		backdrop-filter: blur(50px);
+	}
+
+	#news:hover {
+		background: rgba(255, 255, 255, 0.55);
+	}
+
+	@media screen and (max-height: 368px) {
+		#news {
+			display: none;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		#container {
+			display: flex;
+			flex-direction: column;
+		}
+
+		#hero {
+			display: block;
+			padding-top: 10%;
+		}
+
+		#links {
+			flex-wrap: wrap;
+		}
+
+		#links a.button {
+			padding: 14px 18px;
+		}
+
+		#news {
+			right: 16px;
+			left: 16px;
+			bottom: 2.5rem;
+			max-width: 100%;
+		}
+
+		h1 {
+			line-height: 1.5;
+		}
+	}
+</style>
+
+
+================================================================================
+FILE: src\pages\about.astro
+================================================================================
+
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import Navigation from '../components/Navigation.astro';
+---
+
+<Layout title="About Us | AltFins">
+    <Navigation />
+    <main class="container mx-auto px-4 py-8 pt-[80px]">
+        <h1 class="text-4xl font-bold mb-8">About Us</h1>
+        
+        <div class="grid gap-8">
+            <!-- Mission Section -->
+            <section>
+                <h2 class="text-2xl font-semibold mb-4">Our Vision & Mission</h2>
+                <p class="text-lg">
+                    At altFINS, our mission is to empower crypto traders and investors by bridging the gap between cutting-edge technology and actionable insights. 
+                    We believe in democratizing access to high-quality analytics and tools that were once reserved for institutional players.
+                </p>
+                <p class="text-lg mt-4">
+                    Our vision is to create a comprehensive, user-friendly platform that simplifies the complexities of cryptocurrency trading, allowing users 
+                    to make informed, data-driven decisions with confidence.
+                </p>
+            </section>
+
+            <!-- Team Section -->
+            <section>
+                <h2 class="text-2xl font-semibold mb-4">Meet the Team</h2>
+                <p class="text-lg mb-6">
+                    altFINS is built by a passionate team of finance professionals, technologists, and crypto enthusiasts who share a common goal: to redefine 
+                    how traders interact with the cryptocurrency market.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="border-l-4 border-primary pl-4">
+                        <h3 class="text-xl font-semibold mb-2">Experienced Leadership</h3>
+                        <p class="text-gray-600">
+                            Our leadership team brings decades of combined experience in finance, technology, and cryptocurrency markets. We understand the challenges traders face and are committed to providing innovative solutions.
+                        </p>
+                    </div>
+                    <div class="border-l-4 border-primary pl-4">
+                        <h3 class="text-xl font-semibold mb-2">Innovative Development</h3>
+                        <p class="text-gray-600">
+                            Our team of developers and data scientists is dedicated to creating intuitive tools that simplify complex crypto analytics, ensuring
+                            our platform remains at the forefront of technological innovation.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- What We Offer Section -->
+            <section>
+                <h2 class="text-2xl font-semibold mb-4">What We Offer</h2>
+                <div class="space-y-4">
+                    <h3 class="text-xl font-semibold mb-2">Comprehensive Crypto Analytics</h3>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>Crypto Screener: Advanced filters and sorting capabilities</li>
+                        <li>AI-Generated Chart Patterns: Identify potential trading opportunities</li>
+                        <li>Trading Signals: Technical and on-chain data analysis</li>
+                        <li>Real-Time News & Events: Aggregated market insights</li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold mt-6 mb-2">Time-Saving Tools</h3>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>Automated Alerts: Stay informed about market movements</li>
+                        <li>News Aggregation: Streamline your research process</li>
+                        <li>Interactive Charts: Deep-dive into price action</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Who It's For Section -->
+<section class="space-y-8">
+    <h2 class="text-2xl font-semibold mb-4">Who We Help</h2>
+    <p class="text-lg text-gray-700 mb-6">
+        altFINS is designed for a broad range of users, from casual investors to seasoned traders. Whether you're looking to save time on research,
+        gain a competitive edge in the market, or simply reduce the emotional aspect of trading decisions, our platform has something for everyone.
+    </p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <h3 class="text-xl font-bold mb-4 text-primary">For Beginners</h3>
+            <ul class="list-disc list-inside text-gray-600 space-y-2">
+                <li>Easy-to-use tools and educational resources</li>
+                <li>.navigate the crypto markets with confidence</li>
+                <li>Discover trading opportunities in simple terms</li>
+            </ul>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <h3 class="text-xl font-bold mb-4 text-primary">For Advanced Users</h3>
+            <ul class="list-disc list-inside text-gray-600 space-y-2">
+                <li>Powerful analytics and real-time data</li>
+                <li>Refine their strategies and execute informed trades</li>
+                <li>Access advanced technical indicators and chart patterns</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Problems Solved Section -->
+<section class="space-y-8">
+    <h2 class="text-2xl font-semibold mb-4">The Challenges We Solve</h2>
+    <p class="text-lg text-gray-700 mb-6">
+        Our platform addresses common pain points faced by crypto traders, making your journey smoother and more informed.
+    </p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <h3 class="text-xl font-bold mb-4 text-primary">Information Overload</h3>
+            <p class="text-gray-600">
+                We aggregate essential data points in one place, simplifying your research and analysis process.
+            </p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <h3 class="text-xl font-bold mb-4 text-primary">Time-Consuming Research</h3>
+            <p class="text-gray-600">
+                Our automated tools and alerts save you time, allowing you to focus on making informed decisions.
+            </p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <h3 class="text-xl font-bold mb-4 text-primary">Emotional Decision-Making</h3>
+            <p class="text-gray-600">
+                Objective, data-driven insights to help you stay rational and disciplined in your approach.
+            </p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <h3 class="text-xl font-bold mb-4 text-primary">Lack of Technical Expertise</h3>
+            <p class="text-gray-600">
+                Pre-built tools and educational resources make applying technical analysis easier than ever.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+            <!-- Join Section -->
+            <section>
+                <h2 class="text-2xl font-semibold mb-4">Get Started with altFINS</h2>
+                <p class="text-lg">
+                    Ready to take your crypto trading to the next level? Explore our platform and discover how our tools can enhance your trading strategy.
+                </p>
+                <p class="text-lg mt-4">
+                    Whether you're just starting out or you're a seasoned trader, altFINS offers a range of subscription plans to suit your needs. Plus, our 
+                    mobile app ensures you never miss out on a potential trading opportunity, no matter where you are.
+                </p>
+                <a href="/getting-started" class="mt-6 inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors">
+                    Start Your Journey
+                </a>
+            </section>
+        </div>
+    </main>
+    <Footer />
+</Layout>
+
+
+================================================================================
+FILE: src\pages\cookies.astro
+================================================================================
+
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import Navigation from '../components/Navigation.astro';
+---
+
+<Layout title="Cookie Policy | AltFins">
+    <Navigation />
+    <main class="container mx-auto px-4 py-8 pt-[80px]">
+        <h1 class="text-4xl font-bold mb-8 text-center">Cookie Policy</h1>
+        <div class="prose max-w-none prose-lg prose-h2:text-2xl prose-h2:font-semibold prose-h2:mb-4 prose-p:mb-4 prose-ul:mb-4">
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold mb-4">1. What Are Cookies?</h2>
+                <p>Cookies are small text files that are placed on your computer or device by websites that you visit. They are widely used to make websites work or improve their functionality, as well as to provide information to website owners.</p>
+                <p>Cookies can be categorized as:</p>
+                <ul>
+                    <li><strong>Session cookies:</strong> Temporary cookies that are deleted when you close your browser.</li>
+                    <li><strong>Persistent cookies:</strong> Stored on your device for a set period and remain after you close your browser.</li>
+                </ul>
+              
+            </section>
+
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold mb-4">2. How We Use Cookies</h2>
+                <p>We use cookies to enhance your experience on our website and to understand how you interact with our content. Specifically, cookies help us:</p>
+                <ul>
+                    <li>Remember your preferences, such as language settings or login details.</li>
+                    <li>Analyze website traffic and user behavior to improve our services.</li>
+                    <li>Deliver personalized content and advertisements based on your interests.</li>
+                    <li>Maintain the security and integrity of our website.</li>
+                </ul>
+                
+            </section>
+
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold mb-4">3. Types of Cookies We Use</h2>
+                <p>We use the following types of cookies on our website:</p>
+                <ul>
+                    <li><strong>Essential cookies:</strong> Necessary for the website to function properly.</li>
+                    <li><strong>Performance cookies:</strong> Collect anonymous data about how visitors use the site.</li>
+                    <li><strong>Functionality cookies:</strong> Allow the website to remember choices you make (e.g., font size).</li>
+                    <li><strong>Targeting cookies:</strong> Used to deliver personalized ads based on your browsing habits.</li>
+                </ul>
+                
+            </section>
+
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold mb-4">4. Managing Cookies</h2>
+                <p>You can manage or disable cookies through your browser settings. For example:</p>
+                <ul>
+                    <li>In Chrome, go to Settings > Privacy and Security > Cookies and other site data.</li>
+                    <li>In Firefox, go to Options > Privacy & Security > Cookies and Site Data.</li>
+                </ul>
+                <p>Note that disabling cookies may affect the functionality of our website. For example, certain features may not work correctly if essential cookies are turned off.</p>
+            </section>
+
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold mb-4">5. Changes to This Policy</h2>
+                <p>We may update this Cookie Policy from time to time to reflect changes in our practices or legal requirements. Any updates will be posted on this page, and we encourage you to review this policy periodically.</p>
+                <p>For guidance on organizing layouts with flexibility.</p>
+            </section>
+
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold mb-4">6. Contact Us</h2>
+                <p>If you have any questions or concerns about our use of cookies, please contact us:</p>
+                <ul>
+                    <li>Email: support@altfins.com</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <Footer />
+</Layout>
+
+
+================================================================================
+FILE: src\pages\index.astro
+================================================================================
+
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Hero from '../components/Hero.astro';
+import Features from '../components/Features.astro';
+import TradingTools from '../components/TradingTools.astro';
+import ProblemsSolved from '../components/ProblemsSolved.astro';
+import Education from '../components/Education.astro';
+import ForWhom from '../components/ForWhom.astro';
+import Pricing from '../components/Pricing.astro';
+import Footer from '../components/Footer.astro';
+import CryptoTrading from '../components/CryptoTrading.astro';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+  <Navigation />
+  <main>
+    <Hero />
+    <Features />
+    <TradingTools />
+    <ProblemsSolved />
+    <CryptoTrading />
+    <Education />
+    <ForWhom />
+    <Pricing />
+  </main>
+  <Footer />
+</Layout>
+
+
+================================================================================
+FILE: src\pages\privacy.astro
+================================================================================
+
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import Navigation from '../components/Navigation.astro';
+---
+
+<Layout title="Privacy Policy | AltFins">
+    <Navigation />
+    <main class="container mx-auto px-4 py-8 pt-[80px]">
+        <h1 class="text-4xl font-bold mb-8">Privacy Policy</h1>
+      
+        <div class="prose max-w-none">
+      
+          <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">1. Acceptance of Terms</h2>
+            <p>By accessing and using the AltFins platform, you agree to these Terms of Service ("Terms") and our Privacy Policy. If you do not agree with these Terms, you may not use the platform.</p>
+          </section>
+      
+          <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">2. Use License</h2>
+            <p>We grant you a limited, non-exclusive, revocable license to use the AltFins platform for personal, non-commercial purposes only.  This license does not allow you to alter, distribute, or sell any part of the platform or its content.</p>
+          </section>
+      
+          <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">3. User Conduct</h2>
+            <p>You agree to use the AltFins platform responsibly and legally. This includes:</p>
+            <ul class="list-disc list-inside space-y-2">
+              <li>Providing accurate information when creating an account.</li>
+              <li>Not harming or disrupting the platform or its services.</li>
+              <li>Respecting intellectual property rights.</li>
+            </ul>
+          </section>
+      
+          <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">4. Changes to the Terms</h2>
+            <p>We may update these Terms at any time.  Your continued use of AltFins after any changes means you accept the updated Terms.</p>
+          </section>
+      
+          <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">5. Termination of Access</h2>
+            <p>We may terminate or suspend your access to AltFins at any time, with or without cause. Upon termination, your right to use the platform will end, and you must destroy any downloaded or printed materials.</p>
+          </section>
+      
+          <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">6. Disclaimers</h2>
+            <p>The information on AltFins is for educational purposes only and is not financial advice. We make no warranty regarding the accuracy, reliability, or completeness of the information.</p>
+          </section>
+      
+          <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">7. Limitation of Liability</h2>
+            <p>AltFins is not liable for any damages arising from your use of the platform. We are not responsible for any third-party tools or resources linked on the platform.</p>
+          </section>
+      
+          <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">8. Indemnification</h2>
+            <p>You agree to indemnify AltFins from any claims arising out of your use of the platform or violation of these Terms.</p>
+          </section>
+      
+          <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">9. Governing Law</h2>
+            <p>These Terms are governed by the laws of [Your Jurisdiction].</p>
+          </section>
+      
+          <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">10. Entire Agreement</h2>
+            <p>These Terms are the complete agreement between you and AltFins regarding your use of the platform.</p>
+          </section>
+      
+          <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">11. Contact Information</h2>
+            <p>Contact us at [Your Contact Information] with any questions.</p>
+          </section>
+      
+        </div>
+      </main>
+  <Footer />
+</Layout>
+
+
+================================================================================
+FILE: src\pages\terms.astro
+================================================================================
+
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import Navigation from '../components/Navigation.astro';
+---
+
+<Layout title="Terms of Service | AltFins">
+    <Navigation />
+    <main class="container mx-auto px-4 py-8 pt-[80px]">
+        <h1 class="text-4xl font-bold mb-8 text-center">Terms of Service</h1>
+        <div class="prose max-w-none prose-lg prose-h2:text-2xl prose-h2:font-semibold prose-h2:mb-4 prose-p:mb-4 prose-ul:mb-4">
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold mb-4">1. Acceptance of Terms</h2>
+                <p>Welcome to AltFins! By accessing and using this website, you agree to comply with and be bound by the following terms and conditions. If you disagree with any part of these terms, you must not use this service.</p>
+                <p>These terms apply to all users of the site, including users who are browsers, vendors, customers, merchants, and contributors of content.</p>
+            </section>
+            
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold mb-4">2. Use License</h2>
+                <p>Permission is granted to temporarily access the materials on AltFins's website for personal, non-commercial transitory viewing only. Under this license, you may:</p>
+                <ul>
+                    <li>Display materials on your device for personal use.</li>
+                    <li>Download content for temporary use, provided no copyright notices are removed.</li>
+                </ul>
+                <p>Any unauthorized use of the materials on this website may violate copyright, trademark, or other laws.</p>
+            </section>
+
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold mb-4">3. User Responsibilities</h2>
+                <p>By using AltFins, you agree to:</p>
+                <ul>
+                    <li>Provide accurate information when required.</li>
+                    <li>Maintain and promptly update your account details to keep them accurate.</li>
+                    <li>Protect your login credentials and not share them with unauthorized parties.</li>
+                </ul>
+                <p>If you provide any content or information to AltFins, you are responsible for ensuring that it is not illegal, harmful, or infringing on any party's rights.</p>
+            </section>
+
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold mb-4">4. Intellectual Property Rights</h2>
+                <p>Unless otherwise stated, all materials on this website, including text, graphics, logos, icons, and images, are the property of AltFins and are protected by copyright and other intellectual property laws.</p>
+                <p>You may not reproduce, distribute, modify, or create derivative works of any content without prior written consent from AltFins.</p>
+            </section>
+
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold mb-4">5. Limitation of Liability</h2>
+                <p>AltFins and its affiliates shall not be liable for any direct, indirect, incidental, or consequential damages arising from your use of this website.</p>
+                <p>This includes damages related to:</p>
+                <ul>
+                    <li>Errors or inaccuracies in the content.</li>
+                    <li>Unavailability of the website.</li>
+                    <li>Any action you take based on the content provided.</li>
+                </ul>
+            </section>
+
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold mb-4">6. Modifications to Terms</h2>
+                <p>AltFins reserves the right to modify or replace these terms at any time. If significant changes are made, we will notify users via email or a prominent notice on the website.</p>
+                <p>By continuing to use the site after changes are published, you agree to be bound by the updated terms.</p>
+            </section>
+
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold mb-4">7. Governing Law</h2>
+                <p>These terms and conditions are governed by and construed in accordance with the laws of the USA.</p>
+            </section>
+
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold mb-4">8. Contact Us</h2>
+                <p>If you have questions or concerns about these terms, please contact us:</p>
+                <ul>
+                    <li>Email: support@altfins.com</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <Footer />
+</Layout>
+

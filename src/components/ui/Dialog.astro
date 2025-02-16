@@ -1,0 +1,60 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  videoUrl: string;
+  triggerClass?: string;
+}
+
+const { title, description, videoUrl, triggerClass = '' } = Astro.props;
+---
+
+<dialog id="demo-dialog" class="bg-background text-foreground p-6 rounded-lg shadow-xl backdrop:bg-black/50 backdrop:backdrop-blur-sm [&[open]]:grid [&:not([open])]:hidden w-[90vw] max-w-2xl">
+  <div class="grid gap-4">
+    <div class="flex justify-between items-start">
+      <div>
+        <h2 class="text-lg font-semibold">{title}</h2>
+        <p class="text-gray-400">{description}</p>
+      </div>
+      <button 
+        onclick="this.closest('dialog').close()"
+        class="text-gray-400 hover:text-gray-50"
+      >
+        ✕
+      </button>
+    </div>
+    
+    <div class="aspect-video">
+      <iframe
+        class="w-full h-full"
+        src={videoUrl}
+        title="Platform Demo"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      />
+    </div>
+  </div>
+</dialog>
+
+<button 
+  onclick="document.getElementById('demo-dialog').showModal()" 
+  class={triggerClass}
+>
+  <slot />
+</button>
+
+<script>
+  // Close dialog when clicking outside
+  const dialog = document.getElementById('demo-dialog');
+  dialog?.addEventListener('click', (e) => {
+    const dialogDimensions = dialog.getBoundingClientRect();
+    if (
+      e.clientX < dialogDimensions.left ||
+      e.clientX > dialogDimensions.right ||
+      e.clientY < dialogDimensions.top ||
+      e.clientY > dialogDimensions.bottom
+    ) {
+      dialog.close();
+    }
+  });
+</script>

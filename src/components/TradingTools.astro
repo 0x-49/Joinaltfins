@@ -1,0 +1,139 @@
+---
+import Button from './ui/Button.astro';
+
+const icons = {
+  brainCircuit: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-purple-400 mb-4">
+    <path d="M12 2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-4z"/>
+    <path d="M18 16a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v4z"/>
+    <path d="M2 8h3m-3 4h3m-3 4h3"/>
+    <path d="M19 8h3m-3 4h3m-3 4h3"/>
+  </svg>`,
+  lineChart: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-blue-400 mb-4">
+    <path d="M3 3v18h18"/>
+    <path d="m19 9-5 5-4-4-3 3"/>
+  </svg>`,
+  filter: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-green-400 mb-4">
+    <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+  </svg>`,
+  signal: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-yellow-400 mb-4">
+    <path d="M2 20h.01"/>
+    <path d="M7 20v-4"/>
+    <path d="M12 20v-8"/>
+    <path d="M17 20V8"/>
+    <path d="M22 4v16"/>
+  </svg>`,
+  barChart: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-red-400 mb-4">
+    <line x1="12" y1="20" x2="12" y2="10"/>
+    <line x1="18" y1="20" x2="18" y2="4"/>
+    <line x1="6" y1="20" x2="6" y2="16"/>
+  </svg>`,
+  circleDollarSign: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-teal-400 mb-4">
+    <circle cx="12" cy="12" r="10"/>
+    <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/>
+    <path d="M12 18V6"/>
+  </svg>`
+};
+
+const tools = [
+  {
+    icon: icons.brainCircuit,
+    title: "AI Pattern Recognition",
+    description: "Our AI identifies profitable trading patterns with 78% accuracy, including triangles, wedges, and channels",
+    features: [
+      "Real-time pattern detection",
+      "Success rate validation",
+      "Historical pattern analysis"
+    ]
+  },
+  {
+    icon: icons.lineChart,
+    title: "Technical Analysis",
+    description: "Access over 120 technical indicators and advanced charting tools",
+    features: [
+      "Moving averages",
+      "RSI, MACD, and more",
+      "Custom indicator settings"
+    ]
+  },
+  {
+    icon: icons.filter,
+    title: "Crypto Screener",
+    description: "Filter and find cryptocurrencies matching your trading strategy",
+    features: [
+      "30+ preset filters",
+      "Custom screening rules",
+      "Real-time updates"
+    ]
+  },
+  {
+    icon: icons.signal,
+    title: "Trading Signals",
+    description: "Get actionable trading signals based on technical analysis",
+    features: [
+      "Buy/Sell signals",
+      "Signal strength indicators",
+      "Performance tracking"
+    ]
+  },
+  {
+    icon: icons.barChart,
+    title: "Market Analysis",
+    description: "Comprehensive market data and sentiment analysis",
+    features: [
+      "Market trends",
+      "Volume analysis",
+      "Social sentiment"
+    ]
+  },
+  {
+    icon: icons.circleDollarSign,
+    title: "Portfolio Tracking",
+    description: "Track and analyze your crypto portfolio performance",
+    features: [
+      "Performance metrics",
+      "PnL tracking",
+      "Portfolio analytics"
+    ]
+  }
+];
+---
+
+<section id="trading-tools" class="py-20">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        Comprehensive Trading Tools
+      </h2>
+      <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+        Access a complete suite of professional-grade trading tools powered by AI and real-time data
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {tools.map((tool) => (
+        <div class="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-800/70 transition">
+          <Fragment set:html={tool.icon} />
+          <h3 class="text-xl font-semibold mb-3">{tool.title}</h3>
+          <p class="text-gray-400 mb-4">
+            {tool.description}
+          </p>
+          <ul class="text-gray-300 space-y-2 mb-6">
+            {tool.features.map((feature) => (
+              <li>• {feature}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center mt-12">
+      <Button size="lg" class="gap-2">
+        Try All Tools Free
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14"/>
+          <path d="m12 5 7 7-7 7"/>
+        </svg>
+      </Button>
+    </div>
+  </div>
+</section>

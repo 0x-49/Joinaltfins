@@ -1,0 +1,156 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import Navigation from '../components/Navigation.astro';
+---
+
+<Layout title="About Us | AltFins">
+    <Navigation />
+    <main class="container mx-auto px-4 py-8 pt-[80px]">
+        <h1 class="text-4xl font-bold mb-8">About Us</h1>
+        
+        <div class="grid gap-8">
+            <!-- Mission Section -->
+            <section>
+                <h2 class="text-2xl font-semibold mb-4">Our Vision & Mission</h2>
+                <p class="text-lg">
+                    At altFINS, our mission is to empower crypto traders and investors by bridging the gap between cutting-edge technology and actionable insights. 
+                    We believe in democratizing access to high-quality analytics and tools that were once reserved for institutional players.
+                </p>
+                <p class="text-lg mt-4">
+                    Our vision is to create a comprehensive, user-friendly platform that simplifies the complexities of cryptocurrency trading, allowing users 
+                    to make informed, data-driven decisions with confidence.
+                </p>
+            </section>
+
+            <!-- Team Section -->
+            <section>
+                <h2 class="text-2xl font-semibold mb-4">Meet the Team</h2>
+                <p class="text-lg mb-6">
+                    altFINS is built by a passionate team of finance professionals, technologists, and crypto enthusiasts who share a common goal: to redefine 
+                    how traders interact with the cryptocurrency market.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="border-l-4 border-primary pl-4">
+                        <h3 class="text-xl font-semibold mb-2">Experienced Leadership</h3>
+                        <p class="text-gray-600">
+                            Our leadership team brings decades of combined experience in finance, technology, and cryptocurrency markets. We understand the challenges traders face and are committed to providing innovative solutions.
+                        </p>
+                    </div>
+                    <div class="border-l-4 border-primary pl-4">
+                        <h3 class="text-xl font-semibold mb-2">Innovative Development</h3>
+                        <p class="text-gray-600">
+                            Our team of developers and data scientists is dedicated to creating intuitive tools that simplify complex crypto analytics, ensuring
+                            our platform remains at the forefront of technological innovation.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- What We Offer Section -->
+            <section>
+                <h2 class="text-2xl font-semibold mb-4">What We Offer</h2>
+                <div class="space-y-4">
+                    <h3 class="text-xl font-semibold mb-2">Comprehensive Crypto Analytics</h3>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>Crypto Screener: Advanced filters and sorting capabilities</li>
+                        <li>AI-Generated Chart Patterns: Identify potential trading opportunities</li>
+                        <li>Trading Signals: Technical and on-chain data analysis</li>
+                        <li>Real-Time News & Events: Aggregated market insights</li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold mt-6 mb-2">Time-Saving Tools</h3>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>Automated Alerts: Stay informed about market movements</li>
+                        <li>News Aggregation: Streamline your research process</li>
+                        <li>Interactive Charts: Deep-dive into price action</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Who It's For Section -->
+<section class="space-y-8">
+    <h2 class="text-2xl font-semibold mb-4">Who We Help</h2>
+    <p class="text-lg text-gray-700 mb-6">
+        altFINS is designed for a broad range of users, from casual investors to seasoned traders. Whether you're looking to save time on research,
+        gain a competitive edge in the market, or simply reduce the emotional aspect of trading decisions, our platform has something for everyone.
+    </p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <h3 class="text-xl font-bold mb-4 text-primary">For Beginners</h3>
+            <ul class="list-disc list-inside text-gray-600 space-y-2">
+                <li>Easy-to-use tools and educational resources</li>
+                <li>.navigate the crypto markets with confidence</li>
+                <li>Discover trading opportunities in simple terms</li>
+            </ul>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <h3 class="text-xl font-bold mb-4 text-primary">For Advanced Users</h3>
+            <ul class="list-disc list-inside text-gray-600 space-y-2">
+                <li>Powerful analytics and real-time data</li>
+                <li>Refine their strategies and execute informed trades</li>
+                <li>Access advanced technical indicators and chart patterns</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Problems Solved Section -->
+<section class="space-y-8">
+    <h2 class="text-2xl font-semibold mb-4">The Challenges We Solve</h2>
+    <p class="text-lg text-gray-700 mb-6">
+        Our platform addresses common pain points faced by crypto traders, making your journey smoother and more informed.
+    </p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <h3 class="text-xl font-bold mb-4 text-primary">Information Overload</h3>
+            <p class="text-gray-600">
+                We aggregate essential data points in one place, simplifying your research and analysis process.
+            </p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <h3 class="text-xl font-bold mb-4 text-primary">Time-Consuming Research</h3>
+            <p class="text-gray-600">
+                Our automated tools and alerts save you time, allowing you to focus on making informed decisions.
+            </p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <h3 class="text-xl font-bold mb-4 text-primary">Emotional Decision-Making</h3>
+            <p class="text-gray-600">
+                Objective, data-driven insights to help you stay rational and disciplined in your approach.
+            </p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <h3 class="text-xl font-bold mb-4 text-primary">Lack of Technical Expertise</h3>
+            <p class="text-gray-600">
+                Pre-built tools and educational resources make applying technical analysis easier than ever.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+            <!-- Join Section -->
+            <section>
+                <h2 class="text-2xl font-semibold mb-4">Get Started with altFINS</h2>
+                <p class="text-lg">
+                    Ready to take your crypto trading to the next level? Explore our platform and discover how our tools can enhance your trading strategy.
+                </p>
+                <p class="text-lg mt-4">
+                    Whether you're just starting out or you're a seasoned trader, altFINS offers a range of subscription plans to suit your needs. Plus, our 
+                    mobile app ensures you never miss out on a potential trading opportunity, no matter where you are.
+                </p>
+                <a href="/getting-started" class="mt-6 inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors">
+                    Start Your Journey
+                </a>
+            </section>
+        </div>
+    </main>
+    <Footer />
+</Layout>
